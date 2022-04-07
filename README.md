@@ -107,7 +107,7 @@ flowchart LR
 Given that a `NewFeat` branch was created and diverged from `main`:
 
 ```mermaid
-flowchart TB
+flowchart LR
   Root
   Root --> cb6fa27
   cb6fa27 --> ad6cea7
@@ -122,7 +122,7 @@ flowchart TB
 All we need to do is update the `main` reference:
 
 ```mermaid
-flowchart TB
+flowchart LR
   Root
   Root --> cb6fa27
   cb6fa27 --> ad6cea7
@@ -139,7 +139,7 @@ flowchart TB
 Given that a `NewFeat` branch was created and diverged from `main`, but deleted later on without being merged:
 
 ```mermaid
-flowchart TB
+flowchart LR
   Root
   Root --> cb6fa27
   cb6fa27 --> ad6cea7
@@ -153,7 +153,7 @@ flowchart TB
 If we checkout one of the commits of the deleted branch
 
 ```mermaid
-flowchart TB
+flowchart LR
   Root
   Root --> cb6fa27
   cb6fa27 --> ad6cea7
