@@ -95,6 +95,27 @@ $ git revert <commitid>
 
 # Show was has changed in a commit
 $ git show <commitid>
+
+# Show all tags
+$ git tag
+
+# Create a new tag
+$ git tag <tag>
+
+# Delete a tag
+$ git tag -d <tag>
+```
+
+### Dangerous commands
+
+**ONLY USE THESE COMMANDS IF YOU ABSOLUTELY KNOW WHAT YOU ARE DOING, AND ASSUME THAT TYPICALLY YOU DON'T KNOW WHAT YOU ARE DOING, SO DON'T USE THEM**
+
+```shell
+# Undoing a commit, and keep changes
+$ git reset --soft HEAD~1
+
+# Undoing a commit, and discard changes
+$ git reset --hard HEAD~1
 ```
 
 ## A graphical representation of the repository
