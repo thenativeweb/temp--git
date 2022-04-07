@@ -90,6 +90,10 @@ $ git branch -D <name>
 # Merging a branch (you have to be in the target branch)
 $ git merge <sourcebranch>
 
+# Squash and merge (you have to be in the target branch)
+$ git merge --squash <sourcebranch>
+$ git commit -m "<message>"
+
 # Reverting a commit
 $ git revert <commitid>
 
