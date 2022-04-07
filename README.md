@@ -62,6 +62,9 @@ $ git log
 
 # Remove an already staged file from the staging area without losing the changes to it.
 $ git restore --staged <file>
+
+# Discard any changes in the working directory
+$ git restore <file>
 ```
 
 ## A graphical representation of the repository
