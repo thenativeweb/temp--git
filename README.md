@@ -336,4 +336,7 @@ $ git remote add origin git@github.com:thenativeweb/temp--git.git
 
 # Push your repository to the remote
 $ git push -u origin main
+
+# Cloning a repository from a remote
+$ git clone <url>
 ```
