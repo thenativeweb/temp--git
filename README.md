@@ -116,6 +116,7 @@ flowchart TB
   1b6aec1 --> 5dfa631
   Main --> 0bfa6bf
   NewFeat --> 5dfa631
+  HEAD --> NewFeat
 ```
 
 All we need to do is update the `main` reference:
@@ -130,4 +131,35 @@ flowchart TB
   1b6aec1 --> 5dfa631
   Main --> 5dfa631
   NewFeat --> 5dfa631
+  HEAD --> Main
+```
+
+### How detached head works
+
+Given that a `NewFeat` branch was created and diverged from `main`, but deleted later on without being merged:
+
+```mermaid
+flowchart TB
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  ad6cea7 --> 0bfa6bf
+  0bfa6bf --> 1b6aec1
+  1b6aec1 --> 5dfa631
+  Main --> 0bfa6bf
+  HEAD --> Main
+```
+
+If we checkout one of the commits of the deleted branch
+
+```mermaid
+flowchart TB
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  ad6cea7 --> 0bfa6bf
+  0bfa6bf --> 1b6aec1
+  1b6aec1 --> 5dfa631
+  Main --> 0bfa6bf
+  HEAD --> 5dfa631
 ```
