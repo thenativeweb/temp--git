@@ -51,6 +51,9 @@ $ git commit
 # Commit changes from the staging area to the repository and set a message
 $ git commit -m "<message>"
 
+# Fix the commit message of your last commit
+$ git commit -m "<message>" --amend
+
 # Show changes in a file in the working directory, unless it has already been staged
 $ git diff <file>
 
@@ -78,15 +81,32 @@ flowchart LR
   StagingArea --git commit--> Repository
 ```
 
-### State of the repository
+### How a fast-forward merge works
+
+Given that a `NewFeat` branch was created and diverged from `main`:
 
 ```mermaid
 flowchart LR
-  main --> cb6fa27
+  Root
+  Root --> cb6fa27
   cb6fa27 --> ad6cea7
   ad6cea7 --> 0bfa6bf
-  0bfa6bf --> ea288eb
-  ea288eb --> 38c5700
-  38c5700 --> d47476d
-  d47476d --> 4365ea0
+  0bfa6bf --> 1b6aec1
+  1b6aec1 --> 5dfa631
+  Main --> 0bfa6bf
+  NewFeat --> 5dfa631
+```
+
+All we need to do is update the `main` reference:
+
+```mermaid
+flowchart LR
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  ad6cea7 --> 0bfa6bf
+  0bfa6bf --> 1b6aec1
+  1b6aec1 --> 5dfa631
+  Main --> 5dfa631
+  NewFeat --> 5dfa631
 ```
