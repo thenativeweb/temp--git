@@ -89,6 +89,9 @@ $ git branch -D <name>
 
 # Merging a branch (you have to be in the target branch)
 $ git merge <sourcebranch>
+
+# Show was has changed in a commit
+$ git show <commitid>
 ```
 
 ## A graphical representation of the repository
