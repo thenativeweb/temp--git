@@ -396,3 +396,25 @@ main 1 2 3 ----- 67---- 4589 ------->
           \        \  /
 featA      4 5 8 --- 9 --- STOP
 ```
+
+## Bisecting a bug
+
+```shell
+# Start bisecting mode
+$ git bisect start
+
+# Blame the current version to be bad
+$ git bisect bad
+
+# Tell a version where everything was fine
+$ git bisect good <commitid | tag>
+
+# Run tests, and depending on the outcome, run one of the
+# following two commands, until you found the commit where
+# the bug was introduced:
+$ git bisect good
+$ git bisect bad
+
+# Finally, go back to normal mode
+$ git bisect reset
+```
