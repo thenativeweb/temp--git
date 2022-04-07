@@ -235,3 +235,95 @@ flowchart LR
 
   HEAD --> Main
 ```
+
+### How cherry-picking works
+
+```mermaid
+flowchart LR
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  Main --> ad6cea7
+  HEAD --> Main
+
+  ad6cea7 --> cherry(0bfa6bf)
+  cherry(0bfa6bf) --> 56d5f4d
+  Other --> 56d5f4d
+
+  style cherry fill:#f00
+```
+
+With cherry-picking this becomes:
+
+```mermaid
+flowchart LR
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  ad6cea7 --> cherry2(copy 0bfa6bf)
+  Main --> cherry2(copy 0bfa6bf)
+  HEAD --> Main
+
+  ad6cea7 --> cherry(0bfa6bf)
+  cherry(0bfa6bf) --> 56d5f4d
+  Other --> 56d5f4d
+
+  style cherry fill:#f00
+  style cherry2 fill:#f00
+```
+
+### How rebasing works
+
+```mermaid
+flowchart LR
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  Main --> ad6cea7
+  HEAD --> Main
+
+  ad6cea7 --> coi(0bfa6bf)
+  coi(0bfa6bf) --> 56d5f4d
+  Other --> 56d5f4d
+
+  style coi fill:#444
+```
+
+With rebasing this becomes:
+
+```mermaid
+flowchart LR
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  ad6cea7 --> coi(0bfa6bf)
+  Main --> coi(0bfa6bf)
+  HEAD --> Main
+
+  ad6cea7 --> 56d5f4d
+  Other --> 56d5f4d
+
+  style coi fill:#444
+```
+
+## Git in a team
+
+- First step: Clone a repository from an existing user
+- To synchronize we have two options:
+  - Either Alice pushes her new commits to Bob
+  - Or Bob pulls Alice's new commits from her machine
+
+Alice                 Bob
+
+newproj/        ----> newproj/
+  .git/        /        .git/
+  hello.go*   /         hello.go
+  mod.go     /          mod.go
+            /
+git-server /          git-server
+
+- Protocols for Git over networks
+  - `local`: For a server that serves a repository over a file share
+  - `git`: Real network protocol, but no authentication and read-only
+  - `ssh`: The de-facto standard for communicating with Git servers
+  - `http`: The (other) de-facto standard for communicatin with Git servers
