@@ -81,8 +81,11 @@ $ git checkout -b <name>
 # Switch a branch
 $ git checkout <name>
 
-# Delete a branch
+# Delete a branch (which has already been merged)
 $ git branch -d <name>
+
+# Delete a branch (even if it has not yet been merged), losing data
+$ git branch -D <name>
 
 # Merging a branch (you have to be in the target branch)
 $ git merge <sourcebranch>
