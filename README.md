@@ -38,13 +38,13 @@ $ git add <file>
 
 ```mermaid
 flowchart LR
-  WorkingDirectory --> StagingArea
-  StagingArea --> Repository
+  WorkingDirectory -- git add --> StagingArea
+  StagingArea --git commit--> Repository
 ```
 
 ### State of the repository
 
 ```mermaid
 flowchart LR
-  main
+  main --> cb6fa27
 ```
