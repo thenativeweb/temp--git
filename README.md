@@ -122,6 +122,9 @@ $ git stash pop 0
 
 # Turning a stash into a branch
 $ git stash branch <branchname> 0
+
+# Cherry pick a commit from another branch
+$ git cherry-pick <commitid>
 ```
 
 ### Dangerous commands
