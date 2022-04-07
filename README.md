@@ -327,3 +327,13 @@ git-server /          git-server
   - `git`: Real network protocol, but no authentication and read-only
   - `ssh`: The de-facto standard for communicating with Git servers
   - `http`: The (other) de-facto standard for communicatin with Git servers
+
+## Connecting a local repository to a remote repository
+
+```shell
+# Create an alias name `origin` for git@github.com:...
+$ git remote add origin git@github.com:thenativeweb/temp--git.git
+
+# Push your repository to the remote
+$ git push -u origin main
+```
