@@ -83,6 +83,9 @@ $ git checkout <name>
 
 # Delete a branch
 $ git branch -d <name>
+
+# Merging a branch (you have to be in the target branch)
+$ git merge <sourcebranch>
 ```
 
 ## A graphical representation of the repository
