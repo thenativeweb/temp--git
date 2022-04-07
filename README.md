@@ -42,6 +42,9 @@ $ git add .
 # If you want to select which lines to add (yes, no, quit, all from here, none from here, edit, help)
 $ git add --patch <file>
 
+# Move the information that a file was deleted to the staging area
+$ git rm <file>
+
 # Commit changes from the staging area to the repository
 $ git commit
 
@@ -53,6 +56,12 @@ $ git diff <file>
 
 # Show changes in a file in the working directory, if it has already been staged
 $ git diff --cached <file>
+
+# Show the history of what has happened
+$ git log
+
+# Remove an already staged file from the staging area without losing the changes to it.
+$ git restore --staged <file>
 ```
 
 ## A graphical representation of the repository
@@ -61,7 +70,8 @@ $ git diff --cached <file>
 
 ```mermaid
 flowchart LR
-  WorkingDirectory -- git add --> StagingArea
+  WorkingDirectory --git add--> StagingArea
+  StagingArea --git restore--> WorkingDirectory
   StagingArea --git commit--> Repository
 ```
 
@@ -73,5 +83,7 @@ flowchart LR
   cb6fa27 --> ad6cea7
   ad6cea7 --> 0bfa6bf
   0bfa6bf --> ea288eb
-  ea288eb --> 100644
+  ea288eb --> 38c5700
+  38c5700 --> d47476d
+  d47476d --> 4365ea0
 ```
