@@ -104,6 +104,24 @@ $ git tag <tag>
 
 # Delete a tag
 $ git tag -d <tag>
+
+# Stash your changes
+$ git stash
+
+# List all stashes
+$ git stash list
+
+# Apply your stashed changes back to your working directory
+$ git stash apply 0
+
+# Remove a stash
+$ git stash drop 0
+
+# Apply and remove a stash in a single step
+$ git stash pop 0
+
+# Turning a stash into a branch
+$ git stash branch <branchname> 0
 ```
 
 ### Dangerous commands
