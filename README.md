@@ -322,11 +322,11 @@ newproj/        ----> newproj/
             /
 git-server /          git-server
 
-- Protocols for Git over networks
+- Protocols for git over networks
   - `local`: For a server that serves a repository over a file share
   - `git`: Real network protocol, but no authentication and read-only
-  - `ssh`: The de-facto standard for communicating with Git servers
-  - `http`: The (other) de-facto standard for communicatin with Git servers
+  - `ssh`: The de-facto standard for communicating with git servers
+  - `http`: The (other) de-facto standard for communicatin with git servers
 
 ## Connecting a local repository to a remote repository
 
