@@ -32,12 +32,22 @@ $ git status
 $ git add <file>
 
 # Send *all* the changes from the working directory and its subdirectories to the staging area
+$ git add .
+
+# If you want to select which lines to add (yes, no, quit, all from here, none from here, edit, help)
+$ git add --patch <file>
 
 # Commit changes from the staging area to the repository
 $ git commit
 
 # Commit changes from the staging area to the repository and set a message
 $ git commit -m "<message>"
+
+# Show changes in a file in the working directory, unless it has already been staged
+$ git diff <file>
+
+# Show changes in a file in the working directory, if it has already been staged
+$ git diff --cached <file>
 ```
 
 ## A graphical representation of the repository
