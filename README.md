@@ -352,3 +352,37 @@ $ git pull
 # Delete a remote branch
 $ git push origin :<branch>
 ```
+
+## Git organisation
+
+- Nobody is allowed to work on `main`
+  - `main` is stable by definition
+- Whenever you want to do something, do it on a branch
+  - These branches are called "feature branches"
+  - Commit often, to have savepoints
+- Once ready
+  - Do not merge your branch into `main`
+  - Always first merge `main` into your branch
+    - Fix conflicts if necessary
+  - Then merge your branch into `main`
+    - You might think about whether this should be done using pull requests
+
+### Simple scenario
+
+```
+featB      6 7 .
+          /   / \
+main 1 2 3 ------ 6 7 --- 4 5 8 9 ----->
+          \          \   /
+featA      4 5 8 ----- 9
+```
+
+### Squash scenario
+
+```
+featB      6 7 .--- STOP
+          /   / \
+main 1 2 3 ----- 67---- 4589 ------->
+          \        \  /
+featA      4 5 8 --- 9 --- STOP
+```
