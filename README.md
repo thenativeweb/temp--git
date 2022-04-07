@@ -163,3 +163,27 @@ flowchart LR
   Main --> 0bfa6bf
   HEAD --> 5dfa631
 ```
+
+### How a non fast-forward merge works
+
+Given that a `NewFeat` and a `NewFeat2` branch were created and diverged from `main`, and `main` itself also changed:
+
+```mermaid
+flowchart LR
+  Root
+  Root --> cb6fa27
+  cb6fa27 --> ad6cea7
+  ad6cea7 --> 0bfa6bf
+
+  0bfa6bf --> 143f67a
+  Main --> 143f67a
+
+  0bfa6bf --> 1b6aec1
+  1b6aec1 --> 5dfa631
+  ShowCommand --> 5dfa631
+
+  0bfa6bf --> f563793
+  RevertCommand --> f563793
+
+  HEAD --> Main
+```
