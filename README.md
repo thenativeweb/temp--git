@@ -30,6 +30,14 @@ $ git status
 
 # Send something from the working directory to the staging area
 $ git add <file>
+
+# Send *all* the changes from the working directory and its subdirectories to the staging area
+
+# Commit changes from the staging area to the repository
+$ git commit
+
+# Commit changes from the staging area to the repository and set a message
+$ git commit -m "<message>"
 ```
 
 ## A graphical representation of the repository
@@ -47,4 +55,5 @@ flowchart LR
 ```mermaid
 flowchart LR
   main --> cb6fa27
+  cb6fa27 --> ad6cea7
 ```
