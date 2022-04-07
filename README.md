@@ -68,6 +68,21 @@ $ git restore --staged <file>
 
 # Discard any changes in the working directory
 $ git restore <file>
+
+# Show all branches
+$ git branch
+
+# Create a new branch, but do not switch to it
+$ git branch <name>
+
+# Create a new branch, and switch to it
+$ git checkout -b <name>
+
+# Switch a branch
+$ git checkout <name>
+
+# Delete a branch
+$ git branch -d <name>
 ```
 
 ## A graphical representation of the repository
@@ -86,7 +101,7 @@ flowchart LR
 Given that a `NewFeat` branch was created and diverged from `main`:
 
 ```mermaid
-flowchart LR
+flowchart TB
   Root
   Root --> cb6fa27
   cb6fa27 --> ad6cea7
@@ -100,7 +115,7 @@ flowchart LR
 All we need to do is update the `main` reference:
 
 ```mermaid
-flowchart LR
+flowchart TB
   Root
   Root --> cb6fa27
   cb6fa27 --> ad6cea7
