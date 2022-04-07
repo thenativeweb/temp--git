@@ -90,6 +90,9 @@ $ git branch -D <name>
 # Merging a branch (you have to be in the target branch)
 $ git merge <sourcebranch>
 
+# Reverting a commit
+$ git revert <commitid>
+
 # Show was has changed in a commit
 $ git show <commitid>
 ```
