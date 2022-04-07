@@ -348,4 +348,7 @@ $ git fetch
 
 # Fetching remote changes to your local repository (including merging them)
 $ git pull
+
+# Delete a remote branch
+$ git push origin :<branch>
 ```
