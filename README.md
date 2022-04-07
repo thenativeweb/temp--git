@@ -22,6 +22,11 @@
 ## Git commands
 
 ```shell
+# Configure user name, email, …
+$ git config [--global] user.name "Golo Roden"
+$ git config [--global] user.email "golo.roden@thenativeweb.io"
+$ git config [--global] core.editor "notepad"
+
 # Initialize a new repository
 $ git init
 
@@ -66,4 +71,6 @@ flowchart LR
 flowchart LR
   main --> cb6fa27
   cb6fa27 --> ad6cea7
+  ad6cea7 --> 0bfa6bf
+  0bfa6bf --> ea288eb
 ```
