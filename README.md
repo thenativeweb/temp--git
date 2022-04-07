@@ -339,4 +339,13 @@ $ git push -u origin main
 
 # Cloning a repository from a remote
 $ git clone <url>
+
+# Sending your changes to the remote repository
+$ git push
+
+# Fetching remote changes to your local repository (without merging them!)
+$ git fetch
+
+# Fetching remote changes to your local repository (including merging them)
+$ git pull
 ```
