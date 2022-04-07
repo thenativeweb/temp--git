@@ -1,5 +1,11 @@
 # git
 
+## Contact
+
+- golo.roden@thenativeweb.io
+
+## General
+
 - Version control system
   - From the idea similar to Subversion (SVN), CVS, Team Foundation Server (TFS), Visual Source Safe, …
   - However, it's conceptually different from all of these
